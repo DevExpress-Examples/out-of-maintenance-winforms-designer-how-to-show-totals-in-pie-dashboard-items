@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-US">
+  <Title Text="Dashboard" />
+  <DataSources>
+    <ExtractFileDataSource ComponentName="dashboardExtractDataSource2" Name="Extract Data Source 2">
+      <FileName>..\..\Data\SalesPersonExtract.dat</FileName>
+      <Parameters />
+      <SavedSchema>
+        <Column>
+          <Name>OrderID</Name>
+          <Type>System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>Country</Name>
+          <Type>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>FirstName</Name>
+          <Type>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>LastName</Name>
+          <Type>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>ProductName</Name>
+          <Type>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>CategoryName</Name>
+          <Type>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>OrderDate</Name>
+          <Type>System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>UnitPrice</Name>
+          <Type>System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>Quantity</Name>
+          <Type>System.Int16, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>Discount</Name>
+          <Type>System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>Extended Price</Name>
+          <Type>System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>Sales Person</Name>
+          <Type>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+      </SavedSchema>
+    </ExtractFileDataSource>
+  </DataSources>
+  <Items>
+    <Pie ComponentName="pieDashboardItem1" Name="Pies 1" DataSource="dashboardExtractDataSource2" PieType="Donut">
+      <CustomProperties>
+        <PieTotalSettings>{"Enabled":true,"Prefix":"Total","Postfix":"Sales","MeasureId":"DataItem0"}</PieTotalSettings>
+      </CustomProperties>
+      <DataItems>
+        <Measure DataMember="Extended Price" DefaultId="DataItem0" />
+        <Dimension DataMember="ProductName" TopNEnabled="true" TopNCount="6" TopNMeasure="DataItem0" DefaultId="DataItem2" />
+        <Dimension DataMember="OrderDate" DefaultId="DataItem1" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem2" />
+      </SeriesDimensions>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+      </Arguments>
+      <Values>
+        <Value DefaultId="DataItem0" />
+      </Values>
+    </Pie>
+    <Pie ComponentName="pieDashboardItem2" Name="Pies 2" DataSource="dashboardExtractDataSource2" PieType="Donut">
+      <CustomProperties>
+        <PieTotalSettings>{"Enabled":true,"Prefix":"Based on","Postfix":"Reports","MeasureId":"DataItem2"}</PieTotalSettings>
+      </CustomProperties>
+      <DataItems>
+        <Dimension DataMember="OrderDate" DefaultId="DataItem0" />
+        <Measure DataMember="Extended Price" SummaryType="Count" DefaultId="DataItem2" />
+        <Measure DataMember="Extended Price" DefaultId="DataItem3" />
+        <Dimension DataMember="OrderDate" DateTimeGroupInterval="Quarter" DefaultId="DataItem4" />
+      </DataItems>
+      <HiddenMeasures>
+        <Measure DefaultId="DataItem2" />
+      </HiddenMeasures>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem0" />
+      </SeriesDimensions>
+      <Arguments>
+        <Argument DefaultId="DataItem4" />
+      </Arguments>
+      <Values>
+        <Value DefaultId="DataItem3" />
+      </Values>
+    </Pie>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup Weight="100">
+      <LayoutItem DashboardItem="pieDashboardItem1" Weight="0.0625" />
+      <LayoutItem DashboardItem="pieDashboardItem2" Weight="0.0625" />
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>
