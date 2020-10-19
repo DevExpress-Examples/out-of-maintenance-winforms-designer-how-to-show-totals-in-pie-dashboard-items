@@ -2,7 +2,7 @@
 _files to look at:_
 
 * [Form1.cs](./CS/winforms-designer-how-to-show-totals-in-pie-dashboard-items/Form1.cs) (VB: [Form1.vb](./VB/winforms-designer-how-to-show-totals-in-pie-dashboard-items/Form1.vb))
-* [./CS/winforms-designer-how-to-show-totals-in-pie-dashboard-items/PieTotalExtension.cs]() (VB: [./VB/winforms-designer-how-to-show-totals-in-pie-dashboard-items/PieTotalExtension.vb](./VB//))
+* [PieTotalExtension.cs](./CS/winforms-designer-how-to-show-totals-in-pie-dashboard-items/PieTotalExtension.cs) (VB: [PieTotalExtension.vb](./VB/winforms-designer-how-to-show-totals-in-pie-dashboard-items/PieTotalExtension.vb)
 
 # How to show Totals in Pie Dashboard Items
  
