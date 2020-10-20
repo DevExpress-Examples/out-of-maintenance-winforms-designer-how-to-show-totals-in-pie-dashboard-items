@@ -1,10 +1,10 @@
 
 _files to look at:_
 
-* [Form1.cs](./CS/winforms-designer-how-to-show-totals-in-pie-dashboard-items/Form1.cs) (VB: [Form1.vb](./VB/winforms-designer-how-to-show-totals-in-pie-dashboard-items/Form1.vb))
+* [Form1.cs](./CS/DesignerSample/Form1.cs) (VB: [Form1.vb](./VB/DesignerSample/Form1.vb))
 * [PieTotalExtension.cs](./CS/PieTotalExtension/PieTotalExtension.cs) (VB: [PieTotalExtension.vb](./VB/PieTotalExtension/PieTotalExtension.vb)
 
-# How to show Totals in Pie Dashboard Items
+# How to Show Totals in Pie Dashboard Items
  
 This example demonstrates how to create a WinForms Dashboard extension module that allow users to add and configure totals for a Pie dashboard item.
 
