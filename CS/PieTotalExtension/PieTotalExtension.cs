@@ -179,7 +179,6 @@ namespace PieTotalExtension
             CustomPropertyHistoryItem historyItem = new CustomPropertyHistoryItem(dashboardItem, customPropertyName, settings.ToJson(), $"Totals for {dashboardItem.ComponentName} is {status}");
             dashboardDesigner.AddToHistory(historyItem);
             UpdateTotalSettingsBarItem();
-            dashboardControl.ReloadDataSourceAsync("dashboardSqlDataSource1");
         }
         BarButtonItem CreateSettingsBarItem()
         {
