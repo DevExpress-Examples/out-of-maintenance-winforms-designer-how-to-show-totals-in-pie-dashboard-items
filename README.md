@@ -52,7 +52,7 @@ The **PieTotalModule** class contains the main logic of the extension and includ
 
 * Designer Logic
 
-    This section contains the logic for the Dashboard Designer UI. It includes the Ribbon toolbar items' creation methods, their click handlers, and the method that updates their states based on the currently selected dashboard item.
+    This section contains the logic for the Dashboard Designer UI. It includes methods that add new ribbon toolbar items, their click handlers, and the method that updates their states based on the currently selected dashboard item.
 
 The **PieTotalSettings** class describes the model of custom settings used in this extension. The extension stores this model in a Custom Property of each Pie Item and reads this data when required. The class has the **FromJson** and **ToJson** public static methods which saves and reads data in JSON format because custom properties allow you to store data only in the string format. 
 
