@@ -6,7 +6,7 @@ _files to look at:_
 
 # How to Show Totals in Pie Dashboard Items
  
-This example demonstrates how to create a WinForms Dashboard extension module that allow users to add and configure totals for a Pie dashboard item.
+This example demonstrates how to create a WinForms Dashboard extension module that allows users to add and configure totals for a Pie dashboard item.
 
 ![](images/pie-totals.png)
 
@@ -20,19 +20,19 @@ These custom settings are stored in the dashboard definition and can be saved an
 
 ## How to Integrate the Pie Total Extension Module
 
-To reuse the module in other Dashboard Designer/Viewer applications follow the steps below:
+Follow the steps below to reuse the module in other Dashboard Designer/Viewer applications:
 
-1. Add the **PieTotalExtension** project to your solution;
-2. Add a reference to this project to References in your project with dashboard controls;
-3. Call the following code to create the extension and attach it to the Viewer or Designer control:
+* Add the PieTotalExtension project to your solution
+* Add a reference to this project to References in your project with dashboard controls
+*	Call the following code to create the extension and attach it to the Viewer or Designer control:
 
-C# code:
+**C# code**:
 ```csharp
 PieTotalModule extension = new PieTotalModule();
 extension.Attach(*Dashboard Control instance*);
 ```
 
-VB code: 
+**VB code**: 
 ```vb
 Dim extension As New PieTotalModule()
 extension.Attach(*Dashboard Control instance*)
@@ -44,17 +44,17 @@ The **PieTotalModule** class contains the main logic of the extension and includ
 
 * Assigning Logic
 
-    **Attach** and **Detach** methods in this section subscribe and unsubscribe events used for customization in this extension.
+   The **Attach** and **Detach** methods in this section subscribe and unsubscribe events used for customization in this extension.
 
 * Common Logic
 
-    This section contains event handlers and methods common for the Designer and Viewer controls. 
+    This section contains event handlers and methods for the Designer and Viewer controls.
 
 * Designer Logic
 
-    This section contains logic required for the Dashboard Designer UI. It includes Ribbon toolbar items' creation methods, their click handlers, and the method that updates their states based on the currently selected dashboard item.
+    This section contains the logic for the Dashboard Designer UI. It includes the Ribbon toolbar items' creation methods, their click handlers, and the method that updates their states based on the currently selected dashboard item.
 
-The **PieTotalSettings** class describes the model of custom settings used in this extension. The extension stores this model in a Custom Property of a particular Pie Item and reads this data when required. Since Custom Properties allow storing data only in the string format, this class has two public static methods **FromJson** and **ToJson** which saves and reads data in the JSON format.
+The **PieTotalSettings** class describes the model of custom settings used in this extension. The extension stores this model in a Custom Property of a particular Pie Item and reads this data when required. Since Custom Properties allow storing data only in the string format, this class has the **FromJson** and **ToJson** public static methods which saves and reads data in the JSON format.
 
 The **PieTotalSettingsDialog** dialog allows users to customize data displayed in totals. Users can select a measure which values are displayed in the total and specify leading and trailing texts.  
 
