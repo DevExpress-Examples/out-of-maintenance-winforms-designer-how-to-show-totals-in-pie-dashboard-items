@@ -26,20 +26,18 @@ To reuse the module in other Dashboard Designer/Viewer applications follow the s
 2. Add a reference to this project to References in your project with dashboard controls;
 3. Call the following code to create the extension and attach it to the Viewer or Designer control:
 
-    # [C#](#tab/tabid-csharp)
-    
-    ```csharp
-    PieTotalModule extension = new PieTotalModule();
-    extension.Attach(*Dashboard Control instance*);
-    ```
-    # [VB.NET](#tab/tabid-vb)
-    
-    ```vb
-    Dim extension As New PieTotalModule()
-    extension.Attach(*Dashboard Control instance*)
-    ```
-    ***
+C# code:
+```csharp
+PieTotalModule extension = new PieTotalModule();
+extension.Attach(*Dashboard Control instance*);
+```
 
+VB code: 
+```vb
+Dim extension As New PieTotalModule()
+extension.Attach(*Dashboard Control instance*)
+```
+   
 ## Example Structure    
 
 The **PieTotalModule** class contains the main logic of the extension and includes the following logical sections: 
