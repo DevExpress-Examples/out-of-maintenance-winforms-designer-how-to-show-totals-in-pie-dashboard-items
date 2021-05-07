@@ -66,4 +66,4 @@ The **PieTotalSettingsDialog** dialog allows users to customize data displayed i
 
 ## See Also
 
-* [How to Export Customized Pie Dashboard Item](https://github.com/DevExpress-Examples/WinForms-Dashboard-How-to-export-customized-Pie-Dashboard-Item 
+* [How to Export Customized Pie Dashboard Item](https://github.com/DevExpress-Examples/WinForms-Dashboard-How-to-export-customized-Pie-Dashboard-Item) 
